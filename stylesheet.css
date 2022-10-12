@@ -101,3 +101,38 @@ h3{
 html {
     scroll-behavior: smooth;
 }
+
+.vis-block{
+    padding-top: 2em;
+}
+    
+/* For Parallax Effect */
+.parallax {
+    /* The image used */
+    background-image: url("Mobile-Phone-Bg.jpg");
+    
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third-block{
+    /* top | left | bottom | right */
+    padding: 0em 1em 1em 2em;
+    width: 60%;
+    background: rgba(217, 217, 217, 0.8);
+    border-radius: 20px;
+}
+
+.third-block h1{
+    color: white
+}
+
+.third-block h4{
+    color: white
+}
