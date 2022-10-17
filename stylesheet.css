@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
 .first-container{
     display: flex;
     width: 100%;
@@ -14,27 +20,32 @@
 
 .block{
     /* background-color: rebeccapurple; */
-    width: 70%
+    width: 70%;
+}
+
+.block-world-map{
+    width: 60%
 }
 
 h1{
     font-size: 48px;
     color: #D67878;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
 }
 
 h4{
     font-size: 16px;
     color: #D67878;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
 }
 
 h3{
     text-align: left;
     font-size: 36px;
     color: #D67878;
-    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
 }
 
 .block-button{
@@ -58,7 +69,7 @@ h3{
 .third-container{
     display: flex;
     width: 100%;
-    height: 300px;
+    height: 600px;
 
     flex-direction: column;
     align-items: center;
@@ -90,9 +101,21 @@ h3{
     /* justify-content: center; */
 }
 
+.sixth-container{
+    padding: 3em;
+    display: flex;
+    /* height: 500px; */
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.seventh-container{
+    padding: 3em;
+}
+
 .paragraph{
     padding-top: 0.1em;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 14px;
     text-align: justify;
@@ -105,7 +128,10 @@ html {
 .vis-block{
     padding-top: 2em;
 }
-    
+
+.vis-left{
+    padding-right: 5em;
+}
 /* For Parallax Effect */
 .parallax {
     /* The image used */
@@ -150,10 +176,51 @@ html {
 .last-paragraph{
     font-size: 9px;
     color: #D67878;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
 
 .last-block{
     width: 20%
 }
+
+.highlight-lowest{
+    background-color: #D6DFFF;
+    color: #0B0C71;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-radius: 30px;
+}
+
+.highlight-highest{
+    background-color: #0B0C71;
+    color: #D6DFFF;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-radius: 30px;
+}
+
+/* Collapsible */
+.collapsible {
+    /* background-color: #777; */
+    /* color: white; */
+    cursor: pointer;
+    /* padding: 18px; */
+    /* width: 100%; */
+    border: none;
+    text-align: left;
+    outline: none;
+    /* font-size: 15px; */
+  }
+  
+  .active, .collapsible:hover {
+    /* background-color: #555; */
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    width: 70%;
+    border-radius: 30px;
+  }
