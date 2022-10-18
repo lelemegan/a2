@@ -494,20 +494,20 @@
                                 "title": "Year"
                             }
                         ],
-                        "color": {
-                          "field": "Average_Price_Num",
-                          "scale":{
-                                "type":"threshold",
-                                "domain":[
-                                    8
-                                ],
-                                "range":[
-                                    "#D6DFFF", 
-                                    "#0B0C71"
-                                ]
-                            },
-                                "legend": null
-                        },
+                                "color": {
+                                  "field": "Average_Price_Num",
+                                  "scale":{
+                                        "type":"threshold",
+                                        "domain":[
+                                            8
+                                        ],
+                                        "range":[
+                                            "#D6DFFF", 
+                                            "#0B0C71"
+                                        ]
+                                    },
+                                        "legend": null
+                                },
                     },
                     "layer": [
                         {
@@ -520,7 +520,8 @@
                             "mark": {
                                 "type": "text",
                                 "align": "center",
-                                "baseline": "bottom"
+                                "baseline": "bottom",
+                            "color": "#D67878"
                                 
                             },
                             
@@ -543,7 +544,8 @@
                       {
                         "mark": {
                           "type": "rule",
-                          "color": "red"
+                          "color": "#D67878",
+                          "size": 2
                         }
                       },
                       {
@@ -564,7 +566,9 @@
                             "type": "text",
                             "align": "left",
                             "baseline": "bottom",
-                            "dx": 160
+                            "dx": 160,
+                            "color": "#D67878",
+                            "fontStyle": "italic"
                           },
                           "encoding": {
                             "text": {
@@ -577,7 +581,9 @@
                             "type": "text",
                             "align": "right",
                             "baseline": "middle",
-                            "dx": 255
+                            "dx": 255,
+                            "color": "#D67878",
+                            "fontStyle": "italic"
                           },
                           "encoding": {
                             "text": {
