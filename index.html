@@ -100,15 +100,8 @@
             <div class="sixth-container">
                 <div id="vis_c"></div>
                 <div class="paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum nibh id erat gravida, in porta elit mollis. 
-                    Quisque in ligula mollis, rhoncus orci sit amet, hendrerit neque. Ut eu posuere augue. Nulla non lacus sem. Nullam 
-                    non mauris neque. In hac habitasse platea dictumst. In pharetra eu odio ut rhoncus. Vestibulum non laoreet odio. 
-                    Praesent venenatis egestas tristique. 
-                    <br>
-                    <br>
-                    Nam feugiat velit ut bibendum laoreet. Proin sed quam magna. Fusce porttitor orci suscipit semper gravida. Phasellus 
-                    ac erat sollicitudin, accumsan purus vitae, blandit ex. Nullam turpis turpis, tincidunt in lorem a, placerat feugiat 
-                    ante. Nulla facilisi. Praesent lorem quam, gravida in tellus sollicitudin, blandit pretium enim.
+                    We can see how far the lowest and highest price of 1GB of data is from the average price in the world. 
+                    
                 </div>
             </div>
         </div>
@@ -149,7 +142,7 @@
             <i class="fa fa-chevron-down" aria-hidden="true"></i>        Read More
         </button>
         <div class="content">
-            <div class="""seventh-container">
+            <div class="seventh-container">
                 <div id="vis2_b"></div>
                 <div class="paragraph">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum nibh id erat gravida, in porta elit mollis. 
@@ -303,16 +296,13 @@
                             "field":"Average_Price",
                             "type":"quantitative",
                             "scale":{
-                                "type":"threshold",
+                                "type":"quantile",
                                 "domain":[
                                     1,
                                     3,
                                     5,
                                     7,
-                                    9,
-                                    11,
-                                    13,
-                                    15
+                                    9
                                 ],
                                 "range":[
                                     "#D6DFFF", 
@@ -327,7 +317,7 @@
                                 ]
                             },
                             "legend":{
-                                "format":".2s",
+                                "format":".1f",
                                 "title": "Average Price (in USD)"
                             }
                         },
@@ -345,7 +335,7 @@
                             {
                                 "field":"Average_Price",
                                 "type":"quantitative",
-                                "title":"Average Price in USD",
+                                "title":"Average Price (in USD)",
                                 "format":","
                             },
                             {
@@ -505,8 +495,19 @@
                             }
                         ],
                         "color": {
-                            "value": "#D67878"
-                        }
+                          "field": "Average_Price_Num",
+                          "scale":{
+                                "type":"threshold",
+                                "domain":[
+                                    8
+                                ],
+                                "range":[
+                                    "#D6DFFF", 
+                                    "#0B0C71"
+                                ]
+                            },
+                                "legend": null
+                        },
                     },
                     "layer": [
                         {
@@ -520,7 +521,9 @@
                                 "type": "text",
                                 "align": "center",
                                 "baseline": "bottom"
+                                
                             },
+                            
                             "encoding": {
                                 "text": {"field": "Average_Price_Num", "type": "quantitative", "format": ".2f"}
                         }
@@ -644,6 +647,7 @@
   },
   "vconcat": [
     {
+      "title": "Number of Internet Users in the World",
       "width": 600,
       "layer": [
             {
@@ -706,7 +710,8 @@
               {
                 "field": "No_Of_Internet_Users",
                 "type": "quantitative",
-                "title": "Number of Internet Users"
+                "title": "Number of Internet Users",
+                "format": ","
               }
             ]
           }
@@ -879,7 +884,8 @@
                                                     {
                                                         "field": "No_Internet Users",
                                                         "type": "quantitative",
-                                                        "title": "Number of Internet Users"
+                                                        "title": "Number of Internet Users",
+                                                        "format": ","
                                                     }
                                                     ],
                                                     "color": {"value": "#0B0C71"}
@@ -893,6 +899,8 @@
   },
   "vconcat": [
     {
+      
+      "title": "Percentage of Internet Users in the World",
       "transform": [
         {
           "calculate": "toNumber(datum.Users_Percentage)",
@@ -945,7 +953,9 @@
               "condition": {"value": 0.3, "param": "hover", "empty": false},
               "value": 0
             },
+
             "tooltip": [
+            {"field": "Year", "type": "temporal", "timeUnit": "year", "title": "Year"},
               {"field": "North America", "type": "quantitative", "format": ".2f"},
               {"field": "Europe & Central Asia", "type": "quantitative", "format": ".2f"},
               {"field": "Middle East & North Africa", "type": "quantitative", "format": ".2f"},
